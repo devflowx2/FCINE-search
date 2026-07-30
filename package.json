@@ -1,10 +1,13 @@
 {
-  "name": "my-app",
+  "name": "FNICE-SEARCH",
+  "homepage": "https://devflowx2.github.io/FCINE-search",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -27,3 +30,4 @@
     "vite": "^8.1.1"
   }
 }
+
