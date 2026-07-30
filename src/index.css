@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a1a2e 0%, #0a0a12 70%);
+  color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.app-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ffd700, #ff6a00, #ffd700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  letter-spacing: 2px;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px auto;
+}
+
+.search-input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,215,0,0.3);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 30px;
+  width: 280px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 15px rgba(255,215,0,0.4);
+}
+
+.search-button {
+  background: linear-gradient(135deg, #ff6a00, #ffd700);
+  border: none;
+  color: #1a1a2e;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.05);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffd700;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.movie-card {
+  width: 190px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 15px 30px rgba(255,215,0,0.15);
+  border-color: rgba(255,215,0,0.4);
+}
+
+.movie-poster {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.movie-card:hover .movie-poster {
+  filter: brightness(1.1);
+}
+
+.movie-info {
+  padding: 12px;
+}
+
+.movie-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.movie-year {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* صفحة التفاصيل */
+.details-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.back-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-5px);
+}
+
+.details-content {
+  display: flex;
+  gap: 30px;
+  animation: fadeIn 0.7s ease;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.details-poster {
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(255,215,0,0.2);
+}
+
+.details-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.details-meta {
+  margin: 8px 0;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.providers-box {
+  margin-top: 25px;
+}
+
+.provider-logos {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.provider-logo {
+  width: 55px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.provider-logo:hover {
+  transform: scale(1.15);
+}
+
+.watch-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #ff6a00, #ffd700);
+  color: #1a1a2e;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.watch-link:hover {
+  transform: scale(1.05);
+}
+
+.loading-text {
+  text-align: center;
+  padding: 60px;
+  color: #ffd700;
+  font-size: 1.2rem;
+}
